@@ -5,7 +5,7 @@
 	<meta name="keywords" content="Online, Bookstore, Online Bookstore">
 	 <meta name="author" content="Luca Serena">
     <link type="text/css" href="style.css" rel="stylesheet" />
-    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" href="image/favicon.ico" />
     <script src ="menu.js"> </script>
 </head>
 
@@ -20,7 +20,7 @@
                       <a href="game.php">Minesweeper</a>
                       <a href="edit.php">Change profile</a>
                       <a href="loans.php">Borrow a book</a>
-                      <a href="account.php"><img src="images/home.png" height="30px" width="30px"></a>
+                      <a href="account.php"><img src="image/home.png" height="30px" width="30px"></a>
                       <a>   <form action= "index.php" method= "post">
                                 <input type= "submit" value ="log-out">
                                 <input type = "hidden" name = "logout" value = "true">
