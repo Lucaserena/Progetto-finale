@@ -21,7 +21,7 @@ label{
 }
 
 body{
-    background:#fff url(images/psy.gif) no-repeat center center;
+    background:#fff url(image/psy.gif) no-repeat center center;
     background-size:cover;
 
 }
@@ -64,7 +64,7 @@ legend {
     display: block;
     padding: 25px;
     border-width: 10px;
-    background:#fff url(images/header.jpg) no-repeat center center ;
+    background:#fff url(image/header.jpg) no-repeat center center ;
     background-size:cover;
 
 }
