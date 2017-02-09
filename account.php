@@ -50,7 +50,7 @@ if (isset($_REQUEST["points"]) && isset ($_REQUEST["creditcard"]) && preg_match 
             <option value="160">100$ = 160 points</option>
         </select>
         <br/>
-        <input id="creditcard" type="text" name="creditcard" placeholder="Credit Card" /> <br/><pre></pre>
+        <input id="creditcard" type="text" name="creditcard" placeholder="Credit Card" required/> <br/><pre></pre>
         <input type = "submit" value= "Buy some points!">
     </fieldset>
 </form>
@@ -63,11 +63,11 @@ if (count($bb)>0){ ?>
   	            <h4>Borrowed book</h4>
   	          </div>
 
-  	          <div class ="little">
+  	          <div class ="little" style = "margin-left: 20pt;">
   	            <h4>Author</h4>
               </div>
 
-  	          <div class = "little">
+  	          <div class = "little" style = "margin-left: 20pt;">
       	            <h4>Give back</h4>
      	      </div>
         </div>
