@@ -183,7 +183,7 @@ table, th, td {
 .bomb{
     width: 30pt;
     height: 30pt;
-    background-color: red;
+    background-color: #ff9966;
   /*  background-image: url("http://images.clipartpanda.com/bomb-clipart-cliparti1_bomb_06.jpg"); */
 }
 
@@ -341,14 +341,15 @@ input[type=submit]:hover {
   border:0;
   font-weight: 100;
 }
+
 .button:hover{
-       background: #3B5C76;
+       background: #FF6600;
 }
 
  .green{
-       background: green;
+       background: #ADFF00;
 }
 
  .red{
-       background: red;
+       background: #FF3333;
 }

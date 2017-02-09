@@ -9,18 +9,16 @@ if (!isset($_SESSION["username"])){
            <fieldset style="margin:auto">
                <p> Insert the actual password to act some changes </p>
                <label for="name">Name</label> 
-               <input id="name" type="text" name="name" placeholder="Name" value="" data-validate="required"/> <br/>
+               <input id="name" type="text" name="name" placeholder="Name" value=""/> <br/>
                <label for="name">Surname</label>
-               <input id="surname" type="text" name="surname" placeholder="Surname" value="" data-validate="required"/> <br/>
+               <input id="surname" type="text" name="surname" placeholder="Surname" value=""/> <br/>
                <label for="new_password">New password</label>
-               <input id="new_password" type="password" name="new_password" maxlength="15"placeholder="New password" value="" autocomplete="off"
-                      data-type="password-input" data-validate="required" /> <br/>
+               <input id="new_password" type="password" name="new_password" maxlength="15"placeholder="New password" value="" autocomplete="off" data-type="password-input"/> <br/>
                <label for="repeat_new_password">Repeat new password</label>
                <input id="repeat_new_password" type="password" name="repeat_new_password" maxlength="15"placeholder="Confirm new password" value=""
-                      data-type="password-input" data-validate="required" /> <br/>
+                      data-type="password-input"/> <br/>
                <label for="old_password">Password</label>
-               <input id="old_password" type="password" name="old_password" maxlength="15"placeholder="Insert actual password for each edit" value="" autocomplete="off"
-                      data-type="password-input" data-validate="required"/> <br/>
+               <input id="old_password" type="password" name="old_password" maxlength="15"placeholder="Insert actual password for each edit" value="" autocomplete="off" data-type="password-input" required/> <br/>
                <div class ="sign_in_button"> <input type = "submit" value= "Submit"> </div>
            </fieldset> 
 
@@ -65,7 +63,7 @@ if (!isset($_SESSION["username"])){
                                        $fail[] = "surname"; }  
                           }   
 
-                          if (isset($_POST["new_password"]) && (preg_match ("/ /", $_POST["new_password"])== false) && (preg_match ("/</", $_POST["new_password"])== false) && isset($_POST["repeat_new_password"])){
+                          if (isset($_POST["new_password"]) && (preg_match ("/ /", $_POST["new_password"])== false) && (preg_match ("/</", $_POST["new_password"])== false) && isset($_POST["repeat_new_password"]) && ($_POST["new_password"]!= "")){
                                  $newPass = $_POST ["new_password"];
                                  $confirm = $_POST ["repeat_new_password"];
                                  $insert = "UPDATE account SET password = '$newPass' WHERE username= '$username'";
@@ -82,12 +80,12 @@ if (!isset($_SESSION["username"])){
                           }       
                   } else { ?> <p class= "problem"> Entered password not valid </p>  <?php }
           }
-               if (sizeof($success)>0){ ?> <h1> <?php
+               if (sizeof($success)>0){ ?> <h1 style = "margin: 0 auto;"> <?php
                    foreach ($success as $s)
                            echo $s;
                    ?> successfully edited </h1> <?php
                }
-               if (sizeof($fail)>0){ ?> <p class="problem"> <?php
+               if (sizeof($fail)>0){ ?> <p class="problem" style = "margin: 0 auto;"> <?php
                    foreach ($fail as $f)
                            echo $f;
                    ?> unsuccessfully edited </p> <?php

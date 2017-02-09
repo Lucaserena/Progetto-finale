@@ -17,10 +17,8 @@ require ("header.php");
     <form method= "post" action = "index.php">
         <fieldset>
             <legend> Sign in  </legend>
-            <label for="username">Username</label> <input id="signin_username" type="text" name="signin_username" placeholder="Username" value=""
-                                                          data-validate="required" data-resin-target='signin_username'/> <br/>
-            <label for="password">Password</label> <input id="signin_password" type="password" maxlength = "15" name="signin_p" placeholder="Password" value="" 
-                                                          data-validate="required" data-resin-target='signin_password'/> <br/>
+            <label for="username">Username</label> <input id="signin_username" type="text" name="signin_username" placeholder="Username" value="" data-resin-target='signin_username' required/> <br/>
+            <label for="password">Password</label> <input id="signin_password" type="password" maxlength = "15" name="signin_p" placeholder="Password" value="" data-resin-target='signin_password' required/> <br/>
             <div class ="sign_in_button"> <input type = "submit" value= "Submit"> </div>
         </fieldset>
     </form>
@@ -29,17 +27,17 @@ require ("header.php");
         <fieldset class = "container">
             <legend> Sign up  </legend>
             <label for="username">Username</label> 
-            <input id="username" type="text" name="username" placeholder="Username" value="" data-validate="required"/> <br/>
+            <input id="username" type="text" name="username" placeholder="Username" value="" required/> <br/>
             <label for="name">Name</label> 
-            <input id="name" type="text" name="name" placeholder="Nome" value="" data-validate="required" data-resin-target='name'/> <br/>
+            <input id="name" type="text" name="name" placeholder="Nome" value="" data-resin-target='name' required/> <br/>
             <label for="surname">Surname</label>
-            <input id="surname" type="text" name="surname" placeholder="Cognome" value="" data-validate="required" data-resin-target='name'/> <br/>
+            <input id="surname" type="text" name="surname" placeholder="Cognome" value="" data-resin-target='name' required/> <br/>
             <label for="new_password">Password</label>
             <input id="new_password" type="password" name="password" maxlength="15"placeholder="Password" value="" autocomplete="off"
-                   data-type="password-input" data-validate="required" data-resin-target='newpassword' /> <br/>
+                   data-type="password-input" data-resin-target='newpassword' required/> <br/>
             <label for="confirm_password">Confirm password</label> 
             <input id="confirm_password" type="password" maxlength="15" name="confirm_password"    
-                   placeholder="Conferma  password" value="" autocomplete="off" data-validate="required" data-resin-target='confirmpassword' />  <br/>
+                   placeholder="Conferma  password" value="" autocomplete="off" data-resin-target='confirmpassword' required/>  <br/>
             <div class ="sign_in_button"> <input type = "submit" value= "Submit"> </div>
         </fieldset>
     </form>
