@@ -80,12 +80,12 @@ if (!isset($_SESSION["username"])){
                           }       
                   } else { ?> <p class= "problem"> Entered password not valid </p>  <?php }
           }
-               if (sizeof($success)>0){ ?> <h1 style = "margin: 0 auto;"> <?php
+               if (sizeof($success)>0){ ?> <h1 style = "font-size: 35pt;"> <?php
                    foreach ($success as $s)
                            echo $s;
                    ?> successfully edited </h1> <?php
                }
-               if (sizeof($fail)>0){ ?> <p class="problem" style = "margin: 0 auto;"> <?php
+               if (sizeof($fail)>0){ ?> <p class="problem"> <?php
                    foreach ($fail as $f)
                            echo $f;
                    ?> unsuccessfully edited </p> <?php
